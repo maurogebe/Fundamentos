@@ -1,0 +1,33 @@
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: arial;
+    }
+    .title-1 {
+        margin: 16px 0 16px 10px;
+    }
+    .content-1 span{
+        margin-right: 8px;
+        margin-left: 10px
+    }
+    .section-2 {
+        margin-top: 32px;
+        margin-left: 10px;
+        max-width: 250px;
+        border: 1px solid #0000005c;
+        padding: 10px;
+    }
+    .title-2 {
+        margin-bottom: 8px;
+    }
+    .subtitle-1 {
+        margin-bottom: 8px;
+    }
+    .links {
+        margin-top: 8px;
+    }
+    .link {
+        color: blue;
+        margin-left: 5px;
+        text-decoration: none;
+    }
