@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div>
+        <button onclick="getTableName()" class="btn btn-secondary">Mostrar Todos</button>
+        <button onclick="getTableAge()" class="btn btn-secondary">Mostrar Mayores de 20 y Menores de 40</button>
+        <button onclick="getTableEmail()" class="btn btn-secondary">Mostrar Correos de Academlo</button>
+        <button onclick="getCardSocial()" class="btn btn-secondary">Mostrar Cards</button>
+        <button onclick="getTableFemale()" class="btn btn-secondary">Mostrar Mujeres</button>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="table-users">
+            
+        </tbody>
+    </table>
+    <div id="card-info" style="display: flex;">
+    </div>
+    <footer>
+        <script type="module" src="./ejercicio-4-incluyendo-html-con-js.js"></script>
+    </footer>
+</body>
+</html>
