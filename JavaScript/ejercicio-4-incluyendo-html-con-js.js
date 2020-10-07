@@ -21,6 +21,7 @@ const cardInfo = document.getElementById('card-info')
 
 function getTableName() {
         tableUsers.innerHTML = ''
+        cardInfo.innerHTML = ''
         users.forEach((user) => {
             const row = `<tr>
                             <td>${user.name}</td>
@@ -51,6 +52,7 @@ function getTableName() {
 
 function getTableAge() {
     tableUsers.innerHTML = ''
+    cardInfo.innerHTML = ''
     const age = users.filter((user) => user.age >= 20 && user.age <= 40)
     age.forEach((user) => {
         const row = `<tr>
@@ -84,6 +86,7 @@ function getTableAge() {
 
 function getTableEmail() {
     tableUsers.innerHTML = ''
+    cardInfo.innerHTML = ''
     const emailAcademlo = users.filter((user) => user.email.endsWith('academlo.com'))
     emailAcademlo.forEach((user) => {
         const row = `<tr>
@@ -97,21 +100,42 @@ function getTableEmail() {
 
 // Mostrar Redes Sociales
 
+// function getCardSocial() {
+//     tableUsers.innerHTML = ''
+//     let cardDescription = ''
+//     for(let i = 0; i < users.length; i++) {
+//         let social = users[i].social
+//         cardDescription += `<div class="card" style="width: 18rem;">
+//             <div class="card-body">
+//             <h5 class="card-title">${users[i].name}</h5>
+//             <p class="card-text">${users[i].age}</p>`
+//         for(let j = 0; j < social.length; j++) {
+//             cardDescription += `<a href="#" class="btn btn-primary">${social[j].url}</a>`
+//         }
+//         cardDescription += `<p class="card-text">${users[i].gender}</p>
+//         </div></div>`
+//     }
+//     cardInfo.innerHTML += cardDescription
+// }
+
+// Nuevo metodo de Mostrar Redes Sociales
+
 function getCardSocial() {
     tableUsers.innerHTML = ''
+    cardInfo.innerHTML = ''
     let cardDescription = ''
-    for(let i = 0; i < users.length; i++) {
-        let social = users[i].social
+    users.forEach((user) => {
+        let social = user.social
         cardDescription += `<div class="card" style="width: 18rem;">
-            <div class="card-body">
-            <h5 class="card-title">${users[i].name}</h5>
-            <p class="card-text">${users[i].age}</p>`
-        for(let j = 0; j < social.length; j++) {
-            cardDescription += `<a href="#" class="btn btn-primary">${social[j].url}</a>`
-        }
-        cardDescription += `<p class="card-text">${users[i].gender}</p>
+                                <div class="card-body">
+                                <h5 class="card-title">${user.name}</h5>
+                                <p class="card-text">${user.age}</p>`
+        social.forEach((s) => {
+            cardDescription += `<a href="#" class="btn btn-primary">${s.url}</a>`
+        })
+        cardDescription += `<p class="card-text">${user.gender}</p>
         </div></div>`
-    }
+    })
     cardInfo.innerHTML += cardDescription
 }
 
@@ -135,6 +159,7 @@ function getCardSocial() {
 
 function getTableFemale() {
     tableUsers.innerHTML = ''
+    cardInfo.innerHTML = ''
     const woman = users.filter((user) => user.gender === 'Female')
     woman.forEach((user) => {
         const row = `<tr>
